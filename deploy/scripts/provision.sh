@@ -4,7 +4,7 @@ set -euo pipefail
 CONTAINER_NAME="${CONTAINER_NAME:-saivage}"
 PROJECT_ROOT="${PROJECT_ROOT:-$(cd "$(dirname "$0")/../.." && pwd)}"
 HOST_USER="$(whoami)"
-TARGET_PROJECT_MOUNT="${TARGET_PROJECT_MOUNT:-/work/getrich}"
+TARGET_PROJECT_MOUNT="${TARGET_PROJECT_MOUNT:-/work/target}"
 
 run() {
     sudo lxc-attach -n "$CONTAINER_NAME" -- "$@"
